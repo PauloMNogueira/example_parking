@@ -3,6 +3,7 @@ import 'package:get/instance_manager.dart';
 import 'package:login_test/app/bindings/home_binding.dart';
 import 'package:login_test/app/route/app_pages.dart';
 import 'package:login_test/app/route/page_builder.dart';
+import 'package:login_test/app/ui/pages/events/list_events.widget.dart';
 import 'package:login_test/app/ui/pages/home/home_controller.dart';
 import 'package:login_test/app/ui/pages/home/ticket_widget.dart';
 
@@ -23,17 +24,19 @@ class HomePage extends AppBasePage<HomeController> {
         title: const Text("Home"),
         backgroundColor: const ColorScheme.light().primary,
       ),
-      body: Center(
-          child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceAround,
-        crossAxisAlignment: CrossAxisAlignment.center,
+      body: Column(
         children: [
+          Expanded(
+            child: Center(
+              child: ListEventsWidget(),
+            ),
+          ),
           const ShowTicketWidget(),
           TextButton(
               onPressed: controller.goToQRScanner,
               child: const Text("Ir para QRScan"))
         ],
-      )),
+      ),
     );
   }
 }
