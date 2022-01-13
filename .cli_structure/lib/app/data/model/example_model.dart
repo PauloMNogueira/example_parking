@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-part '<<FEATURE_NAME>>.g.dart';
+part '<__LOWER__>_model.g.dart';
 
 @JsonSerializable()
 class <<FEATURE_NAME>> {
