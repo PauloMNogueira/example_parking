@@ -1,5 +1,5 @@
 import 'package:json_annotation/json_annotation.dart';
-part 'event.g.dart';
+part 'events_model.g.dart';
 
 @JsonSerializable()
 class EventResponse {
@@ -22,8 +22,4 @@ class EventResponse {
       _$EventResponseFromJson(data);
 
   Map<String, dynamic> toJson() => _$EventResponseToJson(this);
-
-  set isFav(bool val) {
-    isFav = val;
-  }
 }

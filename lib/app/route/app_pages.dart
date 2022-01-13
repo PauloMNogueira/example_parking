@@ -1,7 +1,7 @@
 import 'package:login_test/app/route/page_builder.dart';
-import 'package:login_test/app/ui/pages/home/home_page.dart';
-import 'package:login_test/app/ui/pages/qrscan/qrscan_page.dart';
-import 'package:login_test/app/ui/pages/setup/setup_page.dart';
+import 'package:login_test/app/ui/pages/Home/home_page.dart';
+import 'package:login_test/app/ui/pages/Qrscan/qrscan_page.dart';
+import 'package:login_test/app/ui/pages/Setup/setup_page.dart';
 
 abstract class AppPages {
   static const setup = "/setup";
@@ -10,6 +10,6 @@ abstract class AppPages {
   static final pages = [
     AppPageBuilder(const SetupPage()),
     AppPageBuilder(const HomePage()),
-    AppPageBuilder(QRScanPage())
+    AppPageBuilder(const QrscanPage())
   ];
 }
